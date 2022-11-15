@@ -1,4 +1,5 @@
-const Budget = [
+const Budget = { data:
+  [
     {
       date: "April 1",
       name: "Income",
@@ -69,7 +70,14 @@ const Budget = [
       amount: -7,
       tags: ["pets"]
     },
-  ];
+  ],
+  getAll: function(){
+    return this.data
+  },
+  getOne: function(index){
+    return this.data[index]
+  }
+}
 
   module.exports = Budget
   
