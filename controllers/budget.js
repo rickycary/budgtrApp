@@ -4,7 +4,7 @@ const Budget = require("../models/budget")
 const router = express.Router();
 
 router.get('/', (require, response) => {
-    response.send("You hit the budget router")
+    response.render("budget/index.ejs")
 })
 
 module.exports = router
