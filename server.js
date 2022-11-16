@@ -9,6 +9,7 @@ const budgetRouter = require("./controllers/budget")
 // Middleware
 app.use(morgan('tiny'))
 app.use("/budget", budgetRouter)
+app.use("/static", express.static('public'))
 
 // Routes
 app.get('/', (request, response) => {
