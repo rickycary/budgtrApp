@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <link rel="stylesheet" href="/static/skeleton.css">
+        <link rel="stylesheet" href="/static/normalize.css">
 </head>
 <body>
 
@@ -13,13 +15,18 @@
         <h1>Budgtr ALL</h1>
 
         <table>
+            <% budgets.forEach((budget) => { %>
+
+            <tbody>
             <tr>
-                    <% budgets.forEach((budget) => { %>
                         <td><%= budget.date %></td>
                         <td><a href="/budget/<%=  %>"><%= budget.name %></a></td>
                         <td><%= budget.amount %></td>
-                  <%  }) %>
+                  
             </tr>
+        </tbody>
+        <%  }) %>
+
         </table>
 
     </div>
