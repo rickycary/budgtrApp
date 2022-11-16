@@ -15,13 +15,13 @@
         <h1>Budgtr ALL</h1>
 
         <table>
-            <% budgets.forEach((budget) => { %>
+            <% budgets.forEach((budget, index) => { %>
 
             <tbody>
             <tr>
-                        <td><%= budget.date %></td>
-                        <td><a href="/budget/<%=  %>"><%= budget.name %></a></td>
-                        <td><%= budget.amount %></td>
+                        <td class="date"><%= budget.date %></td>
+                        <td><a href="/budget/<%= index %>"><%= budget.name %></a></td>
+                        <td class="amount"><%= budget.amount %></td>
                   
             </tr>
         </tbody>
