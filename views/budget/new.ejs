@@ -10,12 +10,17 @@
 </head>
 <body>
     <div class="container">
-        <h1><%= budget.name %></h1>
-        <a href="/budget"><button>Back</button></a>
-        <ul><%= budget.date %></ul>
-        <h1><%= budget.from %></h1>
-        <h1><%= budget.amount %></h1>
-        <h1><%= budget.tage %></h1>
+        <h1>Add a new item</h1>
+        <form action="/budget" method="post">
+            <input type="text" name="date" placeholder="Date">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="text" name="from" placeholder="From">
+            <input type= "submit" value="Submit">
+
+
+
+        </form>
     </div>
 
     

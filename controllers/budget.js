@@ -10,6 +10,15 @@ router.get('/', (require, response) => {
     })
 })
 
+router.get('/new', (require, response) => {
+    response.render('budget/new.ejs')
+})
+
+router.post('/', (require, response) => {
+    Budget.create(require.body)
+    response.redirect('/budget')
+})
+
 router.get('/:id', (require, response) => {
     response.render('budget/show.ejs', {
         budget: Budget.getOne(require.params.id)

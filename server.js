@@ -8,8 +8,10 @@ const budgetRouter = require("./controllers/budget")
 
 // Middleware
 app.use(morgan('tiny'))
-app.use("/budget", budgetRouter)
 app.use("/static", express.static('public'))
+app.use(express.urlencoded({extended: true})) // parse html data -> req.body
+app.use("/budget", budgetRouter)
+
 
 // Routes
 app.get('/', (request, response) => {
