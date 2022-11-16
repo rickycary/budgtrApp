@@ -15,6 +15,7 @@ router.get('/new', (require, response) => {
 })
 
 router.post('/', (require, response) => {
+    require.body
     Budget.create(require.body)
     response.redirect('/budget')
 })

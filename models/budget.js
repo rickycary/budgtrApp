@@ -76,6 +76,9 @@ const Budget = { data:
   },
   getOne: function(index){
     return this.data[index]
+  },
+  create: function(newBudget) {
+    this.data.push(newBudget)
   }
 }
 

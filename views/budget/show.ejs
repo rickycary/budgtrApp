@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/static/skeleton.css">
-    <link rel="stylesheet" href="/static/normalize.css">
-</head>
+<%- include("../partials/head.ejs") %>
 <body>
     <div class="container">
         <h1><%= budget.name %></h1>
         <a href="/budget"><button>Back</button></a>
-        <ul><%= budget.date %></ul>
-        <h1><%= budget.from %></h1>
-        <h1><%= budget.amount %></h1>
-        <h1><%= budget.tage %></h1>
+        <h3>Date: <%= budget.date %></ul>
+        <h3>From: <%= budget.from %></h1>
+        <h3>Amount: $<%= budget.amount %>.00</h1>
+        <h3>Tags: <%= budget.tags %></h1>
     </div>
 
     
